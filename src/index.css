@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300&display=swap');
+.App{
+    margin: 0;
+    font-family: 'Quicksand';
+    color: brown;
+}
+.links{
+    nav-right: auto;
+    text-decoration: solid;
+    lighting-color: brown;
+}
+
+.Navbar{
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   max-width: 600px;
+   margin:0 auto;
+   border-bottom: 1px solid #f2f2f2;
+}
+.Navbar .links{
+margin-left: auto;
+}
+.Navbar h2{
+    color: rgb(243, 240, 240);
+}
+.Navbar a{
+    margin-left: 16px;
+    text-decoration: none;
+    padding:6px;
+}
+.Navbar a:hover{
+    color: crimson;
+}
+.content{
+    max-width: 600px;
+    margin: 40px auto;
+    padding:20px
+}
+
+/* preview blog/ list */
+.blog-preview{
+    padding: 10px 16px;
+    margin:20px 0;
+    border-bottom: 1p solid  #f2f2f2;
+}
+.blog-preview:hover{
+    box-shadow:  1px 3px 5px rgba(0,0,0,0.1);
+}
+.blog-preview h2{
+    font-size: 20px;
+    color: brown;
+    margin-bottom: 8px;
+}
+.blog-preview p{
+    font-size: 20px;
+    color: black;
+    margin-bottom: 8px;
+}
