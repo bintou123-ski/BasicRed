@@ -2,7 +2,7 @@
 .App{
     margin: 0;
     font-family: 'Quicksand';
-    color: brown;
+    color: rgb(43, 39, 39);
 }
 .links{
     nav-right: auto;
@@ -49,11 +49,14 @@ margin-left: auto;
 }
 .blog-preview h2{
     font-size: 20px;
-    color: brown;
+    color: rgb(167, 9, 9);
     margin-bottom: 8px;
 }
 .blog-preview p{
     font-size: 20px;
     color: black;
     margin-bottom: 8px;
+}
+.blog-preview a{
+    text-decoration: none;
 }
