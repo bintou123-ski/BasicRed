@@ -1,9 +1,29 @@
 import React,{useState} from "react";
+
 const Create = () => {
-    const [body, setBody] = useState('')
+ const [body, setBody] = useState('')
+ const[loading, setLoading]=useState(false)
+
+
+  const handleSubmit=(e)=>{
+      e.preventDefault();
+      const blog ={body};
+
+      setLoading(true)
+      fetch('http://localhost:8000/blogs',{
+          method:'POST',
+          headers:{"Content-Type": "application/json"},
+          body:JSON.stringify(blog)
+      }).then(()=>{
+          console.log('new blog added')
+        
+      })
+  }
+    
     return ( 
-        <div>
-            <form>
+        <div className="create">
+            <h2>Add a new Blog</h2>
+            <form onSubmit={handleSubmit}>
                 <label>Blog body:</label>
                 <textarea
                 required
@@ -11,7 +31,8 @@ const Create = () => {
                 onChange={(e)=>setBody(e.target.value)}
                 ></textarea>
             </form>
-            <button>Add blog</button>
+           {!loading && <button>Add blog</button>} 
+           {loading && <button disabled>Adding blog....</button>} 
         </div>
      );
 }
